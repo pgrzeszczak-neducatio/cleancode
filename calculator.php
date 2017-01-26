@@ -4,8 +4,8 @@ class Calculator {
   public $x1;
   public $x2;
   public function read() {
-    $this->number1 = readline("Enter first number: ");
-    $this->number2 = readline("Enter second number: ");
+    $this->x1 = readline("Enter first number: ");
+    $this->x2 = readline("Enter second number: ");
   }
   public function calc() {
     $op = readline("Enter operator: ");
