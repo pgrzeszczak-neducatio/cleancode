@@ -1,34 +1,39 @@
 <?php
 
 class Calculator {
-  public $x1;
-  public $x2;
-  public function read() {
-    $this->number1 = readline("Enter first number: ");
-    $this->number2 = readline("Enter second number: ");
-  }
-  public function calc() {
-    $op = readline("Enter operator: ");
-    if ($op == '+') {
-      echo $this->x1 + $this->x2;
-    } else {
-      if ($op == '-') {
-        echo $this->x1 - $this->x2;
-      } else {
-        if ($op == '*') {
-          echo $this->x1 * $this->x2;
-        } else {
-          if ($op == '/') {
-            echo $this->x1 / $this->x2;
-          }
-        }
-      }
+
+    public $number1;
+    public $number2;
+    public $operator;
+
+    public function read() {
+        $this->number1 = readline("Enter first number: ");
+        $this->number2 = readline("Enter second number: ");
+        $this->operator = readline("Enter operator: ");
     }
-  }
+
+    public function calc() {
+
+
+        if ($this->operator == '+') {
+            echo $this->number1 + $this->number2 . "\n";
+        }
+
+        if ($this->operator == '-') {
+            echo $this->number1 - $this->number2 . "\n";
+        }
+
+        if ($this->operator == '*') {
+            echo $this->number1 * $this->number2 . "\n";
+        }
+
+        if ($this->operator == '/') {
+            echo $this->number1 / $this->number2 . "\n";
+        }
+    }
+
 }
 
-
-
-$c = new Calculator();
+$c = new Calculator;
 $c->read();
 $c->calc();
